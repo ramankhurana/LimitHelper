@@ -4,95 +4,41 @@ kmax    *       number of nuisance parameters (sources of systematical uncertain
 
 -------------------------------------------------------------------------------------------------
 
-shapes *     PASS  ROOTFILENAME $PROCESS $PROCESS_$SYSTEMATIC
+--shapes *     MONOHBB  ROOTFILENAME $PROCESS $PROCESS_$SYSTEMATIC
 
 -------------------------------------------------------------------------------------------------
-bin                      PASS
-observation              NUMBEROFPASSEVENTS
-
--------------------------------------------------------------------------------------------------
-
-bin                      PASS   PASS    PASS    PASS    PASS    PASS
-process                  Sig    DYee    DYtt    WJets   TT      QCD 
+bin                      MONOHBB
+observation              0
 
 -------------------------------------------------------------------------------------------------
 
-process                  0      1       2       3       4       5  
-
-rate                     5000.0    PASSDYEERATE    PASSDYTTRATE    PASSWJETSRATE    PASSTTRATE    PASSQCDRATE 
+bin                      MONOHBB   MONOHBB    MONOHBB    MONOHBB    MONOHBB    MONOHBB
+process                  Sig       DYJets      WJets      ZH          TT        QCD 
 
 -------------------------------------------------------------------------------------------------
 
-lumi_8TeV         lnN            1.044  1.044  1.044   1.044   1.044    -  
+process                  0                1          2             3          4         5  
 
-CMS_DYee          lnN            -      1.10   -       -       -        -
-CMS_xs_DY         lnN            -      1.20   -       -       -        -
+rate                SIGNALRATE       DYJetsRATE    WJetsRATE    ZHRATE      TTRATE    QCDRATE 
 
-CMS_DYtt          lnN            -      -      1.10    -       -        -
-CMS_xs_DYtt       lnN            -      -      1.20    -       -        -
+-------------------------------------------------------------------------------------------------
 
-CMS_WJets         lnN            -      -      -       1.30    -        -
-CMS_xs_WJets      lnN            -      -      -       1.30    -        -
+lumi_13TeV             lnN            1.044  1.044  1.044   1.044   1.044    -  
 
-CMS_TT            lnN            -      -      -       -       1.15     -
+CMS_xs_Sig             lnN            1.10   -      -       -       -        -
+CMS_xs_DYJets          lnN            -      1.10   -       -       -        -
+CMS_xs_WJets           lnN            -      -      1.10    -       -        -
+CMS_xs_ZH              lnN            -      -      -       1.10    -        -
+CMS_xs_TT              lnN            -      -      -       -       1.10     -
+CMS_xs_QCD             lnN            -      1.10   -       -       -        1.10
 
-CMS_QCD           lnN            -      -      -       -       -        1.10
 
-eToTauFR          lnN            -      5.000  -       -       -        -
 
-escale_tag        shape          -      1.05    -       -       -        -
-escale_probe      shape          -      1.02    -       -       -        -
 
-QCD_bin1_         shape          -      -       -       -       -        1.00
-QCD_bin2_         shape          -      -       -       -       -        1.00
-QCD_bin3_         shape          -      -       -       -       -        1.00
-QCD_bin4_         shape          -      -       -       -       -        1.00
-QCD_bin5_         shape          -      -       -       -       -        1.00
-QCD_bin6_         shape          -      -       -       -       -        1.00
-QCD_bin7_         shape          -      -       -       -       -        1.00
-QCD_bin8_         shape          -      -       -       -       -        1.00
-QCD_bin9_         shape          -      -       -       -       -        1.00
-QCD_bin10_        shape          -      -       -       -       -        1.00
-QCD_bin11_        shape          -      -       -       -       -        1.00
-QCD_bin12_        shape          -      -       -       -       -        1.00
-QCD_bin13_        shape          -      -       -       -       -        1.00
-QCD_bin14_        shape          -      -       -       -       -        1.00
-QCD_bin15_        shape          -      -       -       -       -        1.00
-QCD_bin16_        shape          -      -       -       -       -        1.00
-QCD_bin17_        shape          -      -       -       -       -        1.00
-QCD_bin18_        shape          -      -       -       -       -        1.00
-QCD_bin19_        shape          -      -       -       -       -        1.00
-QCD_bin20_        shape          -      -       -       -       -        1.00
-QCD_bin21_        shape          -      -       -       -       -        1.00
-QCD_bin22_        shape          -      -       -       -       -        1.00
-QCD_bin23_        shape          -      -       -       -       -        1.00
-QCD_bin24_        shape          -      -       -       -       -        1.00
-
-WJets_bin1_       shape          -      -       -       1.00    -        -
-WJets_bin2_       shape          -      -       -       1.00    -        -
-WJets_bin3_       shape          -      -       -       1.00    -        -
-WJets_bin4_       shape          -      -       -       1.00    -        -
-WJets_bin5_       shape          -      -       -       1.00    -        -
-WJets_bin6_       shape          -      -       -       1.00    -        -
-WJets_bin7_       shape          -      -       -       1.00    -        -
-WJets_bin8_       shape          -      -       -       1.00    -        -
-WJets_bin9_       shape          -      -       -       1.00    -        -
-WJets_bin10_      shape          -      -       -       1.00    -        -
-WJets_bin11_      shape          -      -       -       1.00    -        -
-WJets_bin12_      shape          -      -       -       1.00    -        -
-WJets_bin13_      shape          -      -       -       1.00    -        -
-WJets_bin14_      shape          -      -       -       1.00    -        -
-WJets_bin15_      shape          -      -       -       1.00    -        -
-WJets_bin16_      shape          -      -       -       1.00    -        -
-WJets_bin17_      shape          -      -       -       1.00    -        -
-WJets_bin18_      shape          -      -       -       1.00    -        -
-WJets_bin19_      shape          -      -       -       1.00    -        -
-WJets_bin20_      shape          -      -       -       1.00    -        -
-WJets_bin21_      shape          -      -       -       1.00    -        -
-WJets_bin22_      shape          -      -       -       1.00    -        -
-WJets_bin23_      shape          -      -       -       1.00    -        -
-WJets_bin24_      shape          -      -       -       1.00    -        -
-
-------------------------------------------------------------------------------------------------
-
+CMS_Sig                lnN            1.10   -      -       -       -        -
+CMS_DYJets             lnN            -      1.10   -       -       -        -
+CMS_WJets              lnN            -      -      1.10    -       -        -
+CMS_ZH                 lnN            -      -      -       1.10    -        -
+CMS_TT                 lnN            -      -      -       -       1.10     -
+CMS_QCD                lnN            -      1.10   -       -       -        1.10
 
